@@ -1,6 +1,11 @@
 export default (theme) => ({
   root: {
-    maxWidth: 400,
+    [theme.breakpoints.up('xs')]: {
+      maxWidth: 310,
+    },
+    [theme.breakpoints.up('md')]: {
+      maxWidth: 400,
+    },
     [theme.breakpoints.up('lg')]: {
       maxWidth: 500,
     },
@@ -11,5 +16,16 @@ export default (theme) => ({
   },
   avatar: {
     backgroundColor: theme.palette.primary.main,
+  },
+  title: {
+    [theme.breakpoints.up('xs')]: {
+      width: 160,
+    },
+    [theme.breakpoints.up('md')]: {
+      width: 260,
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: 360,
+    },
   },
 });

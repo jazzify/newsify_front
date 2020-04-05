@@ -1,25 +1,26 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-
 import { Grid, Typography } from '@material-ui/core';
+
 import Card from '../Card';
 import styles from './style';
 
 
 function Category(props) {
-  const { classes } = props;
+  const { classes, posts } = props;
+
 
   return (
     <>
       <Typography variant="h3" component="h2" className={classes.categoryTitle}>
-        Post Category
+        {posts[0]}
       </Typography>
       <Grid container className={classes.root}>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={1}>
-            {[0, 1, 2, 3].map((value) => (
-              <Grid key={value} item>
-                <Card />
+            {posts[1].map((post) => (
+              <Grid key={post.url} item>
+                <Card post={post} />
               </Grid>
             ))}
           </Grid>

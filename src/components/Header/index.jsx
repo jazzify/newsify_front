@@ -3,11 +3,9 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  InputBase,
   IconButton,
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import SearchIcon from '@material-ui/icons/Search';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import styles from './style';
@@ -22,19 +20,6 @@ function Header(props) {
         <Typography className={classes.title} variant="h6" noWrap>
           Newfisy
         </Typography>
-        <div className={classes.search}>
-          <div className={classes.searchIcon}>
-            <SearchIcon />
-          </div>
-          <InputBase
-            placeholder="Search…"
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-            inputProps={{ 'aria-label': 'search' }}
-          />
-        </div>
         <div className={classes.grow} />
         <div>
           <IconButton
